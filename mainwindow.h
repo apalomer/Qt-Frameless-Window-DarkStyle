@@ -16,18 +16,22 @@
 
 #include <QtWidgets>
 
-namespace Ui {
-  class MainWindow;
+namespace Ui
+{
+class MainWindow;
 }
 
-class MainWindow : public QMainWindow {
+class MainWindow : public QMainWindow
+{
   Q_OBJECT
 
- public:
+public:
   explicit MainWindow(QWidget *parent = Q_NULLPTR);
   ~MainWindow();
 
- private:
+private:
+  virtual void contextMenuEvent(QContextMenuEvent *event) override;
+
   Ui::MainWindow *ui;
 };
 
